@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -156,8 +156,8 @@
     <main class="wrap">
       <div class="lang-bar">
         <div class="lang-toggle" role="group" aria-label="Idioma / Language">
-          <button type="button" class="active" data-lang-btn="es" aria-pressed="true">ES</button>
-          <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+          <button type="button" class="active" data-lang-btn="en" aria-pressed="true">EN</button>
         </div>
       </div>
       <section class="showpage" aria-label="Stellar Nights: Latin Drag Dinner">
@@ -258,14 +258,14 @@
             lbAlt: 'Show flyer, full size'
           }
         };
-        var lang = 'es';
+        var lang = 'en';
         var posterBtn = document.getElementById('posterBtn');
         var posterImg = document.getElementById('posterImg');
         var lb = document.getElementById('lightbox');
         var lbCloseBtn = document.getElementById('lbClose');
 
         function setLang(next) {
-          lang = I18N[next] ? next : 'es';
+          lang = I18N[next] ? next : 'en';
           var t = I18N[lang];
           document.documentElement.lang = lang;
           document.title = t.title;
@@ -292,6 +292,7 @@
             setLang(this.getAttribute('data-lang-btn'));
           });
         }
+        setLang(lang);
 
         var slot = document.getElementById('lbSlot');
         var cap = document.getElementById('lbCap');

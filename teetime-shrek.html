@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -181,8 +181,8 @@
     <main class="wrap">
       <div class="langbar">
         <div class="langtoggle" role="group" aria-label="Idioma / Language">
-          <button type="button" id="langEs" class="active" aria-pressed="true">ES</button>
-          <button type="button" id="langEn" aria-pressed="false">EN</button>
+          <button type="button" id="langEs" aria-pressed="false">ES</button>
+          <button type="button" id="langEn" class="active" aria-pressed="true">EN</button>
         </div>
       </div>
       <article class="showpage" aria-label="A Shrek Drag Show">
@@ -289,7 +289,7 @@
             metaDesc: 'Tee Time presents A Shrek Drag Show — Saturday, November 14, show at 6 PM, all ages, at CanCan Wonderland (St Paul). Admission at the door. After: Shrek Dance Party 9 PM, 21+.'
           }
         };
-        var lang = 'es';
+        var lang = 'en';
         var btnEs = document.getElementById('langEs');
         var btnEn = document.getElementById('langEn');
         var metaDesc = document.querySelector('meta[name="description"]');
@@ -320,6 +320,7 @@
         }
         btnEs.addEventListener('click', function () { setLang('es'); });
         btnEn.addEventListener('click', function () { setLang('en'); });
+        setLang(lang);
 
         var lb = document.getElementById('lightbox');
         var slot = document.getElementById('lbSlot');
